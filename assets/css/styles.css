@@ -996,6 +996,12 @@ a.contact__value:hover { color: var(--c1); }
 .reveal.is-visible { opacity: 1; transform: none; }
 
 /* ---------- Responsive ---------- */
+@media (min-width: 1001px) {
+  /* let the photo column run the full height of the spec list */
+  .split { align-items: stretch; }
+  .split__media img { height: 100%; aspect-ratio: auto; }
+}
+
 @media (max-width: 1000px) {
   .split { grid-template-columns: 1fr; }
   .split__media { max-width: 520px; }

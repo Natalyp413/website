@@ -22,37 +22,30 @@ python3 -m http.server 8000     # then open http://localhost:8000
 
 ---
 
-## ⚠️ Before you put this live
+## Before you put this live
 
-Contact details are live and correct:
+Everything on the page is real and current:
 
 - **Phone** — (956) 652-2364
 - **Email** — laredomobilemedia@gmail.com
+- **Screen** — 19.9 ft × 9.4 ft (~188 sq ft), 380 × 180 px, 16 mm pitch, 2.11 : 1
 
-If either ever changes, they live in four places: the contact section and the footer
-of `index.html`, the JSON-LD block at the bottom of that file, and `CONTACT_EMAIL` at
-the top of `assets/js/main.js`. `grep -rn "652-2364\|laredomobilemedia@gmail" index.html assets/js/main.js`
-finds all of them.
+The only thing left is the domain. Once you have it, update `<link rel="canonical">`
+and `og:url` near the top of `index.html`.
 
-Three screen specs are still placeholders. Replace them with your real numbers:
-
-| What | Currently says |
-|---|---|
-| **Screen size** | `10 ft × 6 ft` |
-| **Pixel pitch** | `P6.67 SMD` |
-| **Brightness** | `5,500+ nits` |
-
-They sit together in the spec list in `index.html`, each tagged `data-verify`:
+If the phone or email ever changes, they live in four places — the contact section and
+footer of `index.html`, the JSON-LD block at the bottom of that file, and
+`CONTACT_EMAIL` at the top of `assets/js/main.js`:
 
 ```bash
-grep -n "data-verify" index.html
+grep -rn "652-2364\|laredomobilemedia@gmail" index.html assets/js/main.js
 ```
 
-The other spec rows (display, mounting, content, setup, transport) describe what is
-visible in your own photos and are accurate as written.
+### Screen specs, for reference
 
-Also update `<link rel="canonical">` and `og:url` in `index.html` once you have the
-real domain.
+380 × 180 px at a 16 mm pitch works out to 6080 × 2880 mm — 19.95 ft × 9.45 ft, a
+2.111 : 1 ratio. That is 19 × 9 panels of 320 mm (the module sold as "1 foot").
+**Customer artwork should be 380 × 180 px.** That figure is quoted in the FAQ.
 
 ## Wiring up the quote form
 
