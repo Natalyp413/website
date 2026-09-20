@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="152 138 1150 1150" role="img" aria-label="LMM">
+<defs>
+<path id="font_9_13" d="M.49951173 0H.09033203V.6640625H.17675781V.078125H.49951173V0Z"/>
+<path id="font_9_14" d="M.17675781 0H.09033203V.6640625H.16503906L.41748048 .32910157H.41796876L.6699219 .6640625H.74560549V0H.6591797V.52441409L.4296875 .21826172H.40478517L.17675781 .52490237V0Z"/>
+</defs>
+<rect x="152" y="138" width="1150" height="1150" rx="248" fill="#0b0b0d"/>
+<use data-text="L" xlink:href="#font_9_13" transform="matrix(452.3656,0,0,-452.3656,278.2388,862.8163)" fill="#ffffff"/>
+<use data-text="M" xlink:href="#font_9_14" transform="matrix(452.3656,0,0,-452.3656,486.76188,862.8163)" fill="#ffffff"/>
+<use data-text="M" xlink:href="#font_9_14" transform="matrix(452.3656,0,0,-452.3656,838.61538,862.8163)" fill="#ffffff"/>
+</svg>
