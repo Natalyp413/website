@@ -28,7 +28,8 @@ Everything on the page is real and current:
 
 - **Phone** — (956) 652-2364
 - **Email** — laredomobilemedia@gmail.com
-- **Screen** — 19.9 ft × 9.4 ft (~188 sq ft), 380 × 180 px, 16 mm pitch, 2.11 : 1
+- **Screen** — 14 ft × 7 ft (98 sq ft), 380 × 180 px
+- **Service area** — Laredo, TX
 
 The domain is set to **laredomobilemedia.com** — canonical URL, share-card URLs,
 `CNAME`, `robots.txt` and `sitemap.xml` all point at it. Nothing is outstanding.
@@ -43,9 +44,15 @@ grep -rn "652-2364\|laredomobilemedia@gmail" index.html assets/js/main.js
 
 ### Screen specs, for reference
 
-380 × 180 px at a 16 mm pitch works out to 6080 × 2880 mm — 19.95 ft × 9.45 ft, a
-2.111 : 1 ratio. That is 19 × 9 panels of 320 mm (the module sold as "1 foot").
-**Customer artwork should be 380 × 180 px.** That figure is quoted in the FAQ.
+The page states **14 ft × 7 ft (98 sq ft)** at **380 × 180 px**. Artwork is built at
+380 × 180 px — that figure is quoted in the FAQ for customers who supply their own
+files. LMM designs the artwork otherwise.
+
+⚠️ **One open question.** 14 ft × 7 ft is a 2:1 shape, but 380 × 180 px is 2.11:1,
+and 380 px across 14 ft works out to an 11.2 mm pixel pitch rather than the 16 mm
+quoted earlier. Those figures cannot all be right at once. The pixel-pitch and
+aspect-ratio rows were removed from the spec table rather than print a contradiction
+on a sales page. Once the real pitch is confirmed, add the row back.
 
 ## Wiring up the quote form
 
