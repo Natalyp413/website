@@ -28,7 +28,7 @@ Everything on the page is real and current:
 
 - **Phone** — (956) 652-2364
 - **Email** — laredomobilemedia@gmail.com
-- **Screen** — 14 ft × 7 ft (98 sq ft), 380 × 180 px
+- **Screen** — 7 ft tall × 14 ft wide (98 sq ft), 380 × 180 px
 - **Service area** — Laredo, TX
 
 The domain is set to **laredomobilemedia.com** — canonical URL, share-card URLs,
@@ -44,11 +44,11 @@ grep -rn "652-2364\|laredomobilemedia@gmail" index.html assets/js/main.js
 
 ### Screen specs, for reference
 
-The page states **14 ft × 7 ft (98 sq ft)** at **380 × 180 px**. Artwork is built at
+The page states **7 ft tall × 14 ft wide (98 sq ft)** at **380 × 180 px**. Artwork is built at
 380 × 180 px — that figure is quoted in the FAQ for customers who supply their own
 files. LMM designs the artwork otherwise.
 
-⚠️ **One open question.** 14 ft × 7 ft is a 2:1 shape, but 380 × 180 px is 2.11:1,
+⚠️ **One open question.** 7 × 14 ft is a 2:1 shape, but 380 × 180 px is 2.11:1,
 and 380 px across 14 ft works out to an 11.2 mm pixel pitch rather than the 16 mm
 quoted earlier. Those figures cannot all be right at once. The pixel-pitch and
 aspect-ratio rows were removed from the spec table rather than print a contradiction
@@ -86,6 +86,10 @@ markup in `index.html`. Each photo is a `<button class="shot">` carrying:
 
 Photos are served at 1000px wide, JPEG quality ~78. Anything much larger just slows
 the page down.
+
+The gallery currently holds four photos and the grid is set to one row of four
+(`.gallery` in `styles.css`). Adding or removing photos means adjusting that column
+count so the last row does not end up with an orphan.
 
 ## Changing the look
 
