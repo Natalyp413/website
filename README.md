@@ -30,8 +30,8 @@ Everything on the page is real and current:
 - **Email** — laredomobilemedia@gmail.com
 - **Screen** — 19.9 ft × 9.4 ft (~188 sq ft), 380 × 180 px, 16 mm pitch, 2.11 : 1
 
-The only thing left is the domain. Once you have it, update `<link rel="canonical">`
-and `og:url` near the top of `index.html`.
+The domain is set to **laredomobilemedia.com** — canonical URL, share-card URLs,
+`CNAME`, `robots.txt` and `sitemap.xml` all point at it. Nothing is outstanding.
 
 If the phone or email ever changes, they live in four places — the contact section and
 footer of `index.html`, the JSON-LD block at the bottom of that file, and
@@ -99,11 +99,50 @@ The three accent colours feed one gradient (`--grad`) used for the headline
 highlight, the step numbers, section eyebrows and hover underlines. Change those
 three and the whole page follows.
 
-## Deploying to GitHub Pages
+## Deploying to laredomobilemedia.com
 
-Settings → Pages → Build and deployment → Source: **Deploy from a branch**, pick the
-branch and `/ (root)`. The site is live a minute later; add the custom domain on the
-same screen.
+The repo already contains `CNAME`, so GitHub Pages will claim the domain as soon as
+the DNS points at it.
+
+**1. Turn on Pages** — repo Settings → Pages → Source: *Deploy from a branch*, pick the
+branch and `/ (root)`.
+
+**2. Point the DNS** at your registrar. For the apex domain, four A records:
+
+```
+185.199.108.153
+185.199.109.153
+185.199.110.153
+185.199.111.153
+```
+
+And a CNAME record so `www` works too:
+
+```
+www  ->  <your-github-username>.github.io
+```
+
+**3. Back in Settings → Pages**, confirm the custom domain reads `laredomobilemedia.com`,
+then tick **Enforce HTTPS** once the certificate finishes provisioning (usually under an
+hour, occasionally up to 24).
+
+DNS changes can take a few hours to propagate. If Pages reports the domain is not
+resolving yet, that is normal — check again later rather than changing settings.
+
+**Hosting somewhere else instead?** Delete `CNAME` (it is GitHub-specific) and upload
+the folder as-is. There is nothing to build.
+
+## After it is live
+
+Two things worth doing once the site resolves:
+
+- **Test the share card.** Paste the URL into
+  [Facebook's debugger](https://developers.facebook.com/tools/debug/) and text it to
+  yourself. You should see the LMM card, not a bare link.
+- **Submit to Google.** Add the site in
+  [Search Console](https://search.google.com/search-console) and submit
+  `sitemap.xml`. Also claim your Google Business Profile — for a local rental
+  business, that listing drives more calls than the website does.
 
 ## Notes
 
