@@ -24,20 +24,28 @@ python3 -m http.server 8000     # then open http://localhost:8000
 
 ## ⚠️ Before you put this live
 
-Five things are placeholders. Everything else is ready to go.
+Contact details are live and correct:
 
-| What | Where | Currently says |
-|---|---|---|
-| **Phone number** | `index.html` — contact section, footer (×1), JSON-LD block | `(956) 000-0000` |
-| **Email address** | `index.html` (same three spots) **and** `CONTACT_EMAIL` at the top of `assets/js/main.js` | `info@laredomobilemedia.com` |
-| **Screen size** | `index.html` — spec list, marked `data-verify` | `10 ft × 6 ft` |
-| **Pixel pitch** | same spec list | `P6.67 SMD` |
-| **Brightness** | same spec list | `5,500+ nits` |
+- **Phone** — (956) 652-2364
+- **Email** — laredomobilemedia@gmail.com
 
-Find every one of them at once:
+If either ever changes, they live in four places: the contact section and the footer
+of `index.html`, the JSON-LD block at the bottom of that file, and `CONTACT_EMAIL` at
+the top of `assets/js/main.js`. `grep -rn "652-2364\|laredomobilemedia@gmail" index.html assets/js/main.js`
+finds all of them.
+
+Three screen specs are still placeholders. Replace them with your real numbers:
+
+| What | Currently says |
+|---|---|
+| **Screen size** | `10 ft × 6 ft` |
+| **Pixel pitch** | `P6.67 SMD` |
+| **Brightness** | `5,500+ nits` |
+
+They sit together in the spec list in `index.html`, each tagged `data-verify`:
 
 ```bash
-grep -rn "000-0000\|info@laredomobilemedia.com\|data-verify" index.html assets/js/main.js
+grep -n "data-verify" index.html
 ```
 
 The other spec rows (display, mounting, content, setup, transport) describe what is

@@ -6,7 +6,7 @@
   'use strict';
 
   /* ⚠️ Where the quote form sends to. Keep in sync with the mailto: links in index.html. */
-  var CONTACT_EMAIL = 'info@laredomobilemedia.com';
+  var CONTACT_EMAIL = 'laredomobilemedia@gmail.com';
 
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
