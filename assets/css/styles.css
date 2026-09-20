@@ -209,6 +209,8 @@ button, input, textarea {
   z-index: 100;
   transition: background-color .3s var(--ease), border-color .3s var(--ease), backdrop-filter .3s var(--ease);
   border-bottom: 1px solid transparent;
+  /* clear the status bar when viewed edge-to-edge on a phone; 0 everywhere else */
+  padding-top: env(safe-area-inset-top, 0px);
 }
 .site-header.is-stuck {
   background: rgba(8, 8, 10, .78);
