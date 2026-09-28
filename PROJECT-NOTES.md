@@ -3,8 +3,15 @@
 Handoff notes for the LMM website. Last updated 20 September 2026.
 
 **If you are picking this up in a new Claude conversation, paste this whole file
-into the chat as your first message.** That gives Claude everything it needs to
-continue without repeating any of the earlier work.
+into the chat as your first message** and attach `laredo-mobile-media-website.zip`.
+That gives Claude everything it needs to continue without repeating any earlier work.
+
+> **Moving the project to a different GitHub account?** The code was first pushed to
+> an account that is not the owner's. Before the new chat, connect Claude to the
+> right account at https://claude.ai/connect-github and create an empty repository
+> there. Then say: *"Push this website to my GitHub repo OWNER/REPO — files are in
+> the attached zip."* Claude cannot switch GitHub accounts partway through a chat,
+> so this has to be a new one.
 
 ---
 
@@ -12,13 +19,17 @@ continue without repeating any of the earlier work.
 
 | Thing | Where |
 |---|---|
-| Website code | https://github.com/Natalyp413/website |
+| Website code | First pushed to https://github.com/Natalyp413/website — **being moved to the owner's own account** |
+| Complete copy, account-independent | `laredo-mobile-media-website.zip` |
 | Branch (also the default branch) | `claude/laredo-mobile-media-landing-w220bg` |
 | Domain | laredomobilemedia.com |
 | Hosting | GitHub Pages — free |
 
-Nothing is stored on any one computer. Sign into GitHub and Claude from any
-machine and everything is there.
+Nothing depends on any one computer. The zip alone is enough to rebuild or
+redeploy the whole site on any account and any host.
+
+**No GitHub at all?** Unzip the folder and drag it onto https://netlify.com/drop.
+The site is live in seconds and the custom domain is set in Netlify's settings.
 
 ---
 
@@ -67,11 +78,11 @@ repo's history if they are ever wanted back.
 under "Deploying to laredomobilemedia.com". The short version:
 
 - Buy the domain if not already bought
-- GitHub → repo → Settings → Pages → Deploy from a branch →
-  `claude/laredo-mobile-media-landing-w220bg` + `/ (root)` → Save
+- GitHub → repo → Settings → Pages → Deploy from a branch → pick the branch
+  + `/ (root)` → Save
 - At the domain registrar, add four A records on `@`:
   185.199.108.153, 185.199.109.153, 185.199.110.153, 185.199.111.153
-- Add a CNAME record: `www` → `natalyp413.github.io`
+- Add a CNAME record: `www` → `YOUR-GITHUB-USERNAME.github.io`
 - Wait a few hours, then tick "Enforce HTTPS" in Settings → Pages
 
 **2. Pixel pitch — unresolved.** The spec table deliberately leaves this out.
